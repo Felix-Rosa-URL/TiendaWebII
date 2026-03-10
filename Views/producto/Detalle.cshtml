@@ -1,0 +1,16 @@
+@model TiendaWeb.Models.Producto
+@{
+    ViewData["Title"] = "Detalle del Producto";
+}
+
+<h2>@Model.Nombre</h2>
+
+<ul>
+    <li><strong>Código SKU:</strong> @Model.CodigoSku</li>
+    <li><strong>Precio:</strong> RD$ @Model.Precio</li>
+    <li><strong>Stock:</strong> @Model.Stock</li>
+    <li><strong>Descripción:</strong> @Model.Descripcion</li>
+    <li><strong>Activo:</strong> @(Model.Activo ? "Sí" : "No")</li>
+</ul>
+
+<a asp-action="Index" class="btn btn-secondary">← Volver al listado</a>
